@@ -1,0 +1,87 @@
+.promo {
+  padding-top: 162px;
+  padding-bottom: 148px;
+  background-image: url("../img/promo-bg.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    padding-bottom: 150px;
+    background-image: url("../img/promo-bg-1024.webp");
+  }
+
+  @include tablet {
+    background-image: url("../img/promo-bg-768.webp");
+  }
+
+  @include mobile {
+    padding-top: 32px;
+    padding-bottom: 203px;
+    background-image: url("../img/promo-bg-320.webp");
+    background-size: 100% 210px;
+    background-position: top;
+  }
+
+  &__content {
+    position: relative;
+    grid-column: 5 span;
+
+    @include tablet {
+      left: -33px;
+    }
+
+    @include mobile {
+      left: 0;
+      grid-column: 4 span;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: $playfair;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 58px;
+    color: $straw;
+
+    @include mobile {
+      margin: 0;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 49px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+    color: $white;
+
+    @include mobile {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__button {
+    padding: 21px 31px;
+    outline: none;
+
+    @include desktop {
+      padding: 20px 29px;
+    }
+
+    @include mobile {
+      position: absolute;
+      top: 211px;
+      left: 77.5%;
+      width: 296px;
+      transform: translateX(-50%);
+    }
+  }
+}

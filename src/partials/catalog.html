@@ -1,0 +1,272 @@
+<section class="catalog">
+  <div class="container catalog__container grid">
+    <h2 class="section-title catalog__title">Каталог</h2>
+    <div class="catalog__filter filter">
+      <div class="catalog__selection">
+        <h2 class="filter__title">Фильтровать по:</h2>
+        <ul class="list-reset filter__set-list">
+          <li class="filter__set-item">
+            <h3 class="filter__subtitle">Цвет</h3>
+            <ul class="list-reset filter__list">
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="brown" name="color" type="checkbox">
+                  <span class="filter__span">Коричневый</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="black" name="color" type="checkbox" checked>
+                  <span class="filter__span">Черный</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="blue" name="color" type="checkbox">
+                  <span class="filter__span">Синий</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="white" name="color" type="checkbox">
+                  <span class="filter__span">Белый</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter__set-item">
+            <h3 class="filter__subtitle">Категория</h3>
+            <ul class="list-reset filter__list">
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="couches" name="product-category" type="checkbox" checked>
+                  <span class="filter__span">Диваны</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__label">
+                  <input class="filter__input" id="chairs" name="product-category" type="checkbox">
+                  <span class="filter__span">Кресла</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+          <li class="filter__set-item">
+            <h3 class="filter__subtitle filter__subtitle--sm">Цена</h3>
+            <ul class="list-reset filter__range-list range-list">
+              <li class="range-list__item">
+                <label class="range-list__label">
+                  <span class="range-list__span">от</span>
+                  <input class="number-input-reset range-list__number" id="Min-price" name="min price" type="number"
+                    placeholder="2000">
+                </label>
+              </li>
+              <li class="range-list__item">
+                <label class="range-list__label">
+                  <span class="range-list__span">до</span>
+                  <input class="number-input-reset range-list__number" id="Max-price" name="max price" type="number"
+                    placeholder="150 000">
+                </label>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="catalog__promo-card promo-card">
+        <p class="promo-card__descr">Оксфорд 1950</p>
+        <h3 class="promo-card__title">Новая коллекция изысканных кресел</h3>
+        <a class="promo-card__link" href="#">
+          <span>В каталог</span>
+          <svg class="arrow-icon promo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2216_925)">
+              <circle cx="16" cy="16" r="15" stroke-width="2" />
+              <path d="M14 11L19 16L14 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="catalog__main">
+      <ul class="list-reset catalog__list grid">
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture t-8">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-1-320.webp, ./img/product-card-1-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-1-768.webp, ./img/product-card-1-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-1-1024.webp, ./img/product-card-1-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-1.webp, ./img/product-card-1-2x.webp 2x">
+              <img src="./img/product-card-1.png" alt="Диван кожаный, чёрный" loading="eager">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">5,0</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван кожаный <br> &#8243;R-94&#8243;</h3>
+              <p class="product-card__price">94 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture t-4">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-2-320.webp, ./img/product-card-2-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-2-768.webp, ./img/product-card-2-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-2-1024.webp, ./img/product-card-2-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-2.webp, ./img/product-card-2-2x.webp 2x">
+              <img src="./img/product-card-2.png" alt="Диван кожаный, апартековый" loading="eager">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,9</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван апартековый <br> &#8243;T-75&#8243;</h3>
+              <p class="product-card__price">69 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture t-4">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-3-320.webp, ./img/product-card-3-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-3-768.webp, ./img/product-card-3-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-3-1024.webp, ./img/product-card-3-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-3.webp, ./img/product-card-3-2x.webp 2x">
+              <img src="./img/product-card-3.png" alt="Диван тканевый, синий" loading="eager">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,8</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван тканевый <br> &#8243;D-31&#8243;</h3>
+              <p class="product-card__price">28 490 руб</p>
+              <a class="button-hollow product-card__button" href="./product-d31.html">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-4-320.webp, ./img/product-card-4-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-4-768.webp, ./img/product-card-4-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-4-1024.webp, ./img/product-card-4-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-4.webp, ./img/product-card-4-2x.webp 2x">
+              <img src="./img/product-card-4.png" alt="Диван велюровый, оранжевый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,8</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван велюровый &#8243;Y-68&#8243;</h3>
+              <p class="product-card__price">22 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-5-320.webp, ./img/product-card-5-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-5-768.webp, ./img/product-card-5-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-5-1024.webp, ./img/product-card-5-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-5.webp, ./img/product-card-5-2x.webp 2x">
+              <img src="./img/product-card-5.png" alt="Диван из шинила, светло-жёлтый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,8</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван из шинила <br> &#8243;W-95&#8243;</h3>
+              <p class="product-card__price">22 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 575.99px)"
+                srcset="./img/product-card-6-320.webp, ./img/product-card-6-320-2x.webp 2x">
+              <source media="(max-width: 991.99px)"
+                srcset="./img/product-card-6-768.webp, ./img/product-card-6-768-2x.webp 2x">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-6-1024.webp, ./img/product-card-6-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-6.webp, ./img/product-card-6-2x.webp 2x">
+              <img src="./img/product-card-6.png" alt="Диван флоковый, персиковый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,8</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван флоковый <br> &#8243;G-41&#8243;</h3>
+              <p class="product-card__price">17 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--md">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-7-1024.webp, ./img/product-card-7-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-7.webp, ./img/product-card-7-2x.webp 2x">
+              <img src="./img/product-card-7.png" alt="Диван из шинила, серый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,8</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван шиниловый &#8243;V-43&#8243;</h3>
+              <p class="product-card__price">19 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--md">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-8-1024.webp, ./img/product-card-8-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-8.webp, ./img/product-card-8-2x.webp 2x">
+              <img src="./img/product-card-8.png" alt="Диван велюровый, бежевый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,7</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван велюровый &#8243;S-99&#8243;</h3>
+              <p class="product-card__price">19 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+        <li class="catalog__item catalog__item--md">
+          <article class="product-card">
+            <picture class="product-card__picture">
+              <source media="(max-width: 1199.99px)"
+                srcset="./img/product-card-9-1024.webp, ./img/product-card-9-1024-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/product-card-9.webp, ./img/product-card-9-2x.webp 2x">
+              <img src="./img/product-card-9.png" alt="Диван из кожзама, светло-зеленый" loading="lazy">
+            </picture>
+            <p class="product-card__rating" aria-hidden="true">4,7</p>
+            <div class="product-card__content">
+              <h3 class="product-card__title">Диван из кожзама &#8243;F-85&#8243;</h3>
+              <p class="product-card__price">26 990 руб</p>
+              <a class="button-hollow product-card__button" href="#">Купить</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <div class="catalog__button-set">
+        <button class="button-reset button-hollow catalog__button catalog__button--active"
+          aria-label="Первая страница каталога">1</button>
+        <button class="button-reset button-hollow catalog__button" aria-label="Вторая страница каталога">2</button>
+        <button class="button-reset button-hollow catalog__button catalog__button--md"
+          aria-label="Третья страница каталога">3</button>
+      </div>
+    </div>
+  </div>
+</section>
