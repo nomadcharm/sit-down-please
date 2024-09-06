@@ -1,0 +1,197 @@
+.specials {
+  padding-top: 70px;
+  background-color: $white;
+
+  @include mobile {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 26px;
+
+    @include mobile {
+      width: 59%;
+    }
+  }
+
+  &__list {
+    row-gap: 32px;
+    grid-template-rows: auto;
+
+    @include mobile {
+      row-gap: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    grid-column: 3 span;
+
+    @include tablet-custom {
+      grid-column: 6 span;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      grid-column: 6 span;
+
+      @include desktop {
+        grid-column: 3 span;
+      }
+
+      @include tablet-custom {
+        grid-column: 6 span;
+      }
+    }
+
+    &:nth-child(3) {
+      @include tablet {
+        display: none;
+      }
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.specials-card {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  padding-top: 35px;
+  min-height: 511px;
+  border-radius: 10px;
+  background-color: $wildsand;
+
+  &--lg {
+    background-image: url("../img/product-card-lg.svg");
+    background-position: right 30px bottom 30px;
+    background-repeat: no-repeat;
+    background-size: 230px 107px;
+
+    @include desktop {
+      background-image: none;
+    }
+  }
+
+  &__picture {
+    align-self: center;
+    margin-bottom: 3px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    &--lg {
+      @include desktop {
+        position: relative;
+        bottom: 30px;
+      }
+
+      @include mobile {
+        bottom: 34px;
+      }
+    }
+
+    &--lg-1 {
+      @include mobile {
+        position: relative;
+        bottom: 41px;
+      }
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding-right: 10px;
+    width: 92px;
+    height: 34px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $white;
+    background: url("../img/discount-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    min-height: 183px;
+    padding: 15px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 23px;
+    width: 99%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    margin: 0;
+    margin-bottom: 19px;
+
+    @include tablet {
+      margin-bottom: 23px;
+    }
+
+    &--new {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 23px;
+      color: $crusta;
+    }
+
+    &--old {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      text-decoration: line-through;
+      color: $dustygray;
+    }
+  }
+
+  &__button {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 18px 34px;
+    text-align: center;
+
+    @include desktop {
+      padding: 17px 33.5px;
+    }
+  }
+}

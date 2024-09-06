@@ -1,0 +1,486 @@
+.catalog {
+  padding-bottom: 70px;
+  background-color: $white;
+
+  &__container {
+    row-gap: 24px;
+    grid-template-areas:
+    "filter filter filter title title title title title title title title title"
+    "filter filter filter main main main main main main main main main";
+
+    @include desktop {
+      grid-template-areas:
+      "title title title title title title title title title"
+      "filter filter filter filter filter filter filter filter filter"
+      "main main main main main main main main main";
+    }
+
+    @include tablet {
+      grid-template-areas:
+      "title title title title title title"
+      "filter filter filter filter filter filter"
+      "main main main main main main";
+    }
+  }
+
+  &__selection {
+    @include mobile {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    &--md {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:nth-child(1) {
+      order: 0;
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+
+      @include tablet {
+        order: 3;
+      }
+
+      @include mobile {
+        order: 2;
+      }
+    }
+
+    &:nth-child(4) {
+      order: 3;
+
+      @include tablet {
+        order: 2;
+      }
+
+      @include mobile {
+        order: 3;
+      }
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 5;
+    }
+
+    &:nth-child(7) {
+      order: 6;
+    }
+
+    &:nth-child(8) {
+      order: 7;
+    }
+
+    &:nth-child(9) {
+      order: 8;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: filter;
+    padding-bottom: 63px;
+
+    @include desktop {
+      padding-bottom: 0;
+    }
+  }
+
+  &__main {
+    grid-area: main;
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+  }
+
+  &__list {
+    row-gap: 32px;
+    grid-template-rows: auto;
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 34px;
+    }
+
+    @include mobile {
+      row-gap: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include desktop {
+      grid-column: 3 span;
+    }
+  }
+
+  &__button-set {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__button {
+    padding: 5.5px 9px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    color: $mediumpurple;
+
+    &--active {
+      border-color: transparent;
+      color: $white;
+      background-color: $purpleheart;
+    }
+
+    &--md {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
+
+.filter {
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__label {
+    outline: none;
+  }
+
+  &__set-list {
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__set-item {
+    &:not(:last-child) {
+      margin-bottom: 27px;
+
+      @include desktop {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      @include desktop {
+        margin-right: 45px;
+      }
+
+      @include tablet-custom {
+        margin-bottom: 17px;
+      }
+
+      @include mobile {
+        margin-right: 29px;
+        margin-bottom: 17px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include desktop {
+        margin-right: 85px;
+      }
+
+      @include tablet-custom {
+        margin-right: 90px;
+      }
+
+      @include mobile {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    color: $dovegray;
+
+    &--sm {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__item {
+    outline: none;
+
+    &:not(:last-child) {
+      margin-bottom: 10.5px;
+    }
+  }
+
+  &__input {
+    appearance: none;
+    position: absolute;
+    outline: none;
+    transition: color 0.3s ease-in-out;
+
+    &:checked+.filter__span::before {
+      border-color: $mediumpurple;
+      background-color: $mediumpurple;
+    }
+
+    &:checked+.filter__span::after {
+      opacity: 1;
+    }
+
+    &:focus-visible+.filter__span::before {
+      border-color: $purpleheart;
+    }
+
+    &:focus-visible+.filter__span {
+      color: $purpleheart;
+    }
+  }
+
+  &__span {
+    position: relative;
+    z-index: 10;
+    padding-left: 33px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $dovegray;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      z-index: -1;
+      width: 21px;
+      height: 20px;
+      border: 1px solid $dustygray;
+      border-radius: 1px;
+      background-color: transparent;
+      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 4px;
+      z-index: 1;
+      width: 13px;
+      height: 12px;
+      background-image: url("../img/check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      transform: translateY(-55%);
+    }
+
+    @include hover {
+      color: $mediumpurple;
+    }
+  }
+}
+
+.range-list {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+  }
+
+  &__span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $dovegray;
+  }
+
+  &__number {
+    padding: 5px 12px 5px 13px;
+    width: 86px;
+    outline: none;
+    border: 1px solid $dustygray;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -moz-appearance: textfield;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $dovegray;
+    }
+
+    &:focus-visible {
+      border-color: $mediumpurple;
+      background-color: $bluechalk;
+    }
+
+    @include hover {
+      border-color: $mediumpurple;
+    }
+
+    &:active {
+      border-color: $purpleheart;
+      background-color: transparent;
+    }
+  }
+}
+
+.promo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 218px 30px 33px;
+  border-radius: 10px;
+  background-color: $mineshaft;
+  background-image: url("../img/catalog-promo.webp");
+  background-position: top;
+  background-size: 296px 190px;
+  background-repeat: no-repeat;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__descr {
+    margin: 0;
+    font-family: $playfair;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    color: $straw;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    width: 80%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $dustygray;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: $mediumpurple;
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: transparent;
+      transition: 0.3s ease-in-out, 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    &:focus-visible {
+      &::after {
+        left: 0;
+        right: 25%;
+        width: 75%;
+        background-color: $mediumpurple;
+      }
+
+      & .promo-icon path {
+        stroke: $mineshaft;
+      }
+
+      & .promo-icon circle {
+        fill: $mauve;
+      }
+    }
+
+    @include hover {
+      &::after {
+        left: 0;
+        right: 25%;
+        width: 75%;
+        background-color: $mediumpurple;
+      }
+
+      & .promo-icon path {
+        stroke: $mineshaft;
+      }
+
+      & .promo-icon circle {
+        fill: $mediumpurple;
+      }
+    }
+
+    &:active {
+      color: $purpleheart;
+
+      &::after {
+        background-color: $purpleheart;
+      }
+
+      & .promo-icon path {
+        stroke: $mineshaft;
+      }
+
+      & .promo-icon circle {
+        fill: $purpleheart;
+        stroke: $purpleheart;
+      }
+    }
+  }
+}

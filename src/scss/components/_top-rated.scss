@@ -1,0 +1,135 @@
+.top-rated {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: $white;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    row-gap: 32px;
+
+    @include mobile {
+      row-gap: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    grid-column: 3 span;
+
+    &--hd {
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 15px 13px;
+  min-height: 420px;
+  border-radius: 10px;
+  background-color: $wildsand;
+
+  @include mobile {
+    padding: 0;
+    min-height: 278px;
+  }
+
+  &__picture {
+    position: relative;
+    align-self: center;
+
+    @include mobile {
+      bottom: -3px;
+      max-height: 54px;
+    }
+  }
+
+  &__rating {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin: 0;
+    padding-left: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $crusta;
+    background-image: url("../img/star.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 16px 15px;
+    user-select: none;
+
+    @include mobile {
+      top: 15px;
+      left: 16px;
+      padding-left: 19px;
+      font-size: 12px;
+      line-height: 16px;
+      background-size: 13px 12px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 15px 15px;
+    min-height: 183px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+
+    @include desktop {
+      margin-bottom: 22px;
+      width: 105%;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+      width: 95%;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: $dovegray;
+
+    @include mobile {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__button {
+    align-self: baseline;
+    margin-top: auto;
+    padding: 19px 35px;
+
+    @include desktop {
+      padding: 18px 33px;
+    }
+
+    @include mobile {
+      padding: 10px 23px 11px;
+    }
+  }
+}
