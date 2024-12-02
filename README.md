@@ -23,4 +23,5 @@ npm run build
 
 ### 🛠️ Технологии:
 - [Gulp](https://gulpjs.com/)
+- [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
